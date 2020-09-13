@@ -76,6 +76,6 @@ bcrypt.compare("bacon", hash, function(err, res) {
 bcrypt.compare("veggies", hash, function(err, res) {
     // res = false
 });*/
-app.listen(5000,()=>{
-    console.log('app is running on port 5000');
+app.listen( process.env.PORT || 5000,()=>{
+    console.log(`app is running on port ${process.env.PORT}`);
 })
